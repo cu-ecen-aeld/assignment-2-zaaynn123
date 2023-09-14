@@ -8,7 +8,7 @@ on:
 jobs:
     unit-test:
         container: cuaesd/aesd-autotest:unit-test
-        runs-on: self-host
+        runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
           - name: Checkout submodules
@@ -16,13 +16,8 @@ jobs:
           - name: Run unit test
             run: ./unit-test.sh
     full-test:
-<<<<<<< HEAD
         container: cuaesd/aesd-autotest:assignment1
-        runs-on: self-host
-=======
-        container: cuaesd/aesd-autotest:assignment2
-        runs-on: self-hosted
->>>>>>> assignments-base/assignment2
+        runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v2
           - name: Checkout submodules
